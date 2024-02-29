@@ -1,0 +1,31 @@
+.header {
+  margin-top: 28px;
+  margin-bottom: 60px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    &__list {
+      display: flex;
+      gap: 60px;
+    }
+
+    &__link {
+      font-size: 20px;
+    }
+  }
+
+  &__btn {
+
+    background-color: #5E44FC;
+    transition: all .2s ease;
+
+    &:hover{ 
+        background-color: #3925bc;
+    }
+  }
+}
