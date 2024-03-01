@@ -1,5 +1,6 @@
 import React from 'react';
 import logoDesc from '../../assets/logo.svg';
+import logoTablet from '../../assets/logo-tablet.svg'
 import './style.scss';
 
 import { motion } from 'framer-motion';
@@ -7,9 +8,15 @@ const Header = () => {
   return (
     <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{delay: .2}} className="header">
       <div className="header__inner">
-        <div className="">
+        <div className="header__logo-desctop">
           <a href="/">
             <img src={logoDesc} alt="logo" />
+          </a>
+        </div>
+
+        <div className="header__logo-tablet">
+          <a href="/">
+            <img src={logoTablet} alt="logo" />
           </a>
         </div>
 

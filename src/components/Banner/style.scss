@@ -7,6 +7,14 @@
 
   &__right {
     margin-top: -83px;
+    position: relative;
+
+    &-ellipse {
+      position: absolute;
+      top: -140px;
+      left: -150px;
+      z-index: -10;
+    }
   }
 
   &__title {
@@ -63,6 +71,19 @@
     gap: 17px;
 
     padding: 0;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+
+    li{ 
+      transition : all .2s ease;
+      &:hover{ 
+        transform: translateY(5px);
+      }
+    }
   }
 
   &__poster-list {
@@ -95,5 +116,31 @@
         right: -183px;
       }
     }
+  }
+
+  &__planet {
+    position: absolute;
+    bottom: -895px;
+    right: 230px;
+    // max-width: 200px;
+
+    &-circle {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    &-planet {
+      position: absolute;
+      top: 80px;
+      right: 95px;
+
+    }
+  }
+  &__right-ellipse {
+    position: relative;
+  }
+
+  &__big-ellipse {
+    position: absolute;
   }
 }
