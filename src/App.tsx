@@ -1,11 +1,14 @@
 import Header from './components/Header/Header';
+import Banner from './components/Banner/Banner';
 import './global.scss';
+
 function App() {
   return (
     <div className="container">
       <Header />
-
-      <div className="">asd</div>
+      <main>
+        <Banner />
+      </main>
     </div>
   );
 }

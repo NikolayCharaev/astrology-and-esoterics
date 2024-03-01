@@ -1,9 +1,11 @@
 import React from 'react';
 import logoDesc from '../../assets/logo.svg';
 import './style.scss';
+
+import { motion } from 'framer-motion';
 const Header = () => {
   return (
-    <header className="header">
+    <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{delay: .2}} className="header">
       <div className="header__inner">
         <div className="">
           <a href="/">
@@ -33,10 +35,9 @@ const Header = () => {
           </ul>
         </nav>
 
-
-        <button className='btn header__btn'>Купить промокод</button>
+        <button className="btn header__btn">Купить промокод</button>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

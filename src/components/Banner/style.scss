@@ -1,0 +1,99 @@
+.banner {
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+  }
+
+  &__right {
+    margin-top: -83px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 68px;
+    line-height: 105%;
+    color: #ffffff;
+    margin-bottom: 28px;
+
+    span {
+      color: #cdaaf5;
+    }
+  }
+
+  &__description {
+    width: 449px;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+
+    margin-bottom: 40px;
+
+    span {
+      color: #cdaaf5;
+    }
+  }
+
+  &__btn {
+    background: linear-gradient(180deg, #00ffa3 -24.53%, #301d5f 183.96%);
+  }
+
+  .btn__wrapper {
+    position: relative;
+  }
+
+  .btn__ellipse {
+    z-index: -4;
+    position: absolute;
+    top: -37px;
+    left: -60px;
+
+    img {
+      width: 163px;
+      height: 130px;
+    }
+  }
+
+  .socials {
+    margin-top: 147px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 0;
+  }
+
+  &__poster-list {
+    display: flex;
+
+    position: relative;
+
+    li {
+      &:nth-child(1) {
+        position: absolute;
+        top: 143px;
+        left: -24px;
+      }
+
+      &:nth-child(2) {
+        z-index: 10;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        bottom: 43px;
+        right: -130px;
+        z-index: 8;
+      }
+
+      &:nth-child(4) {
+        z-index: 6;
+        position: absolute;
+        top: 190px;
+        right: -183px;
+      }
+    }
+  }
+}
