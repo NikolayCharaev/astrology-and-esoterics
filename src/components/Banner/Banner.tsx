@@ -9,6 +9,8 @@ import phoneThree from '../../assets/banner-phone/3.png';
 import phoneFour from '../../assets/banner-phone/4.png';
 import bigEllipse from '../../assets/big-ellipse.svg';
 import sunMoon from '../../assets/sun-moon.svg';
+
+import allMobiles from '../../assets/banner-phone/allMobiles.png';
 import { motion } from 'framer-motion';
 import './style.scss';
 
@@ -64,17 +66,23 @@ const Banner = () => {
 
         <div className="banner__right">
           <div className="banner__right-ellipse">
-            <img className='banner__big-ellipse' src={bigEllipse} alt="big-ellipse" />
+            <div className="banner__big-ellipse">
+              <img className="" src={bigEllipse} alt="big-ellipse" />
 
-            <div className="banner__planet">
-              <div className="banner__planet-circle">
-                <img className="rotating-reverse " src={ellipse} alt="ellipse" />
-                <div className="banner__planet-planet">
-                  <img className="" src={sunMoon} alt="planet" />
+              <div className="banner__planet">
+                <div className="banner__planet-circle">
+                  <img className="rotating-reverse circle" src={ellipse} alt="ellipse" />
+                  <div className="banner__planet-planet">
+                    <img className="" src={sunMoon} alt="planet" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="banner__allMobiles">
+            <img src={allMobiles} alt="allMobiles" />
+          </div> 
           <motion.ul
             className="banner__poster-list"
             initial={{ opacity: 0 }}

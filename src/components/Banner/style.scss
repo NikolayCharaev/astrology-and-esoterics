@@ -9,13 +9,22 @@
     margin-top: -83px;
     position: relative;
 
+    @media (max-width: 930px) {
+      margin-left: -53px;
+    }
+
     &-ellipse {
       position: absolute;
       top: -140px;
       left: -150px;
       z-index: -10;
+
+      @media (max-width: 720px) {
+        left: -230px;
+      }
     }
   }
+
 
   &__title {
     font-weight: 400;
@@ -26,6 +35,11 @@
 
     span {
       color: #cdaaf5;
+    }
+
+    @media (max-width: 930px) {
+      font-size: 44px;
+      width: 472px;
     }
   }
 
@@ -38,6 +52,11 @@
     line-height: 140%;
 
     margin-bottom: 40px;
+
+    @media (max-width: 930px) {
+      font-size: 16px;
+      width: 346px;
+    }
 
     span {
       color: #cdaaf5;
@@ -77,12 +96,15 @@
       align-items: flex-start;
     }
 
-
-    li{ 
-      transition : all .2s ease;
-      &:hover{ 
+    li {
+      transition: all 0.2s ease;
+      &:hover {
         transform: translateY(5px);
       }
+    }
+
+    @media (max-width: 560px) {
+      flex-direction: row;
     }
   }
 
@@ -90,7 +112,15 @@
     display: flex;
 
     position: relative;
+    z-index: -2;
 
+    @media (max-width: 930px) {
+      margin-left: -130px;
+    }
+
+    @media (max-width: 720px) {
+      display: none;
+    }
     li {
       &:nth-child(1) {
         position: absolute;
@@ -100,6 +130,9 @@
 
       &:nth-child(2) {
         z-index: 10;
+
+        @media (max-width: 930px) {
+        }
       }
 
       &:nth-child(3) {
@@ -120,20 +153,39 @@
 
   &__planet {
     position: absolute;
-    bottom: -895px;
-    right: 230px;
-    // max-width: 200px;
 
+    top: 650px;
+    right: 570px;
+
+    @media (max-width: 720px) {
+      top: 694px;
+      right: 623px;
+    }
     &-circle {
       position: relative;
       top: 0;
       left: 0;
+
+      @media (max-width: 720px) {
+        .circle {
+          width: 200px;
+        }
+      }
     }
     &-planet {
       position: absolute;
       top: 80px;
       right: 95px;
 
+      @media (max-width: 720px) {
+        top: 42px;
+        right: 47px;
+        width: 100px;
+
+        img {
+          width: 100px;
+        }
+      }
     }
   }
   &__right-ellipse {
@@ -142,5 +194,21 @@
 
   &__big-ellipse {
     position: absolute;
+  }
+
+  &__allMobiles {
+    display: none;
+
+    @media (max-width: 720px) {
+      display: block;
+      margin-left: -169px;
+      margin-top: 103px;
+      position: relative;
+      z-index: -20;
+
+      img {
+        width: 446px;
+      }
+    }
   }
 }

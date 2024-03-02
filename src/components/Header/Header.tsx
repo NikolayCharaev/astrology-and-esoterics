@@ -1,12 +1,20 @@
-import React from 'react';
+import { useState } from 'react';
 import logoDesc from '../../assets/logo.svg';
-import logoTablet from '../../assets/logo-tablet.svg'
+import logoTablet from '../../assets/logo-tablet.svg';
+import burger from '../../assets/icons/burger.svg';
+import close from '../../assets/icons/close.svg';
+
 import './style.scss';
 
 import { motion } from 'framer-motion';
 const Header = () => {
+  const [mobileMenuActive, setMobileMenuActive] = useState<boolean>(false);
   return (
-    <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{delay: .2}} className="header">
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+      className="header">
       <div className="header__inner">
         <div className="header__logo-desctop">
           <a href="/">
@@ -17,6 +25,12 @@ const Header = () => {
         <div className="header__logo-tablet">
           <a href="/">
             <img src={logoTablet} alt="logo" />
+          </a>
+        </div>
+
+        <div className="header__logo-mobile">
+          <a href="/">
+            <img src={logoDesc} alt="logo" />
           </a>
         </div>
 
@@ -42,7 +56,39 @@ const Header = () => {
           </ul>
         </nav>
 
-        <button className="btn header__btn">Купить промокод</button>
+        <div className="header__buttons">
+          <button className="btn header__btn">Купить промокод</button>
+
+          <div
+            className="mobile-buttons"
+            onClick={() => {
+              setMobileMenuActive((prev) => !prev);
+            }} style={{backgroundColor: mobileMenuActive  ? '#1e0645' : '' }}>
+            <img   src={mobileMenuActive ? close : burger} alt="" />
+          </div>
+        </div>
+
+        <div className={`nav__mobile ${mobileMenuActive ? 'mobile-active' : 'mobile-hidden'}`}>
+          <ul className={`nav__mobile-list`}>
+            <li className="nav__mobile-item">
+              <a className="nav__mobile-link" href="/">
+                О приложении
+              </a>
+            </li>
+
+            <li className="nav__mobile-item">
+              <a className="nav__mobile-link" href="/">
+                Тарифы
+              </a>
+            </li>
+
+            <li className="nav__mobile-item">
+              <a className="nav__mobile-link" href="/">
+                Вопросы и ответы
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </motion.header>
   );
