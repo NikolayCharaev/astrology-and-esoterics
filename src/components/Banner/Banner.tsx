@@ -1,4 +1,3 @@
-import React from 'react';
 import ellipse from '../../assets/ellipse.png';
 import appstore from '../../assets/appstore.svg';
 import google from '../../assets/google.svg';
@@ -79,10 +78,32 @@ const Banner = () => {
               </div>
             </div>
           </div>
+          <div className="banner__bottom-mobile">
+            <div className="banner__bottom-allMobiles">
+              <img src={allMobiles} alt="allMobiles" />
+            </div>
+            <motion.ul
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.45 }}
+              className="socials ">
+              <li className="socials__item">
+                <a className="socials__link" href="/">
+                  <img className="socials__img" src={appstore} alt="appstore" />
+                </a>
+              </li>
+              <li className="socials__item">
+                <a className="socials__link" href="/">
+                  <img className="socials__img" src={google} alt="google" />
+                </a>
+              </li>
+            </motion.ul>
+          </div>
 
           <div className="banner__allMobiles">
             <img src={allMobiles} alt="allMobiles" />
           </div>
+
           <motion.ul
             className="banner__poster-list"
             initial={{ opacity: 0 }}
