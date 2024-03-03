@@ -40,7 +40,7 @@ const Banner = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
             className="btn__wrapper">
-            <button className="btn banner__btn">Купить промокод</button>
+            <button className="btn banner__btn big-btn">Купить промокод</button>
             <div className="btn__ellipse rotating-element">
               <img src={ellipse} alt="ellipse" />
             </div>
@@ -82,7 +82,7 @@ const Banner = () => {
 
           <div className="banner__allMobiles">
             <img src={allMobiles} alt="allMobiles" />
-          </div> 
+          </div>
           <motion.ul
             className="banner__poster-list"
             initial={{ opacity: 0 }}
